@@ -1,1 +1,390 @@
+/* =========================
+   PORSCHE SERVICE CENTER
+   ========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d50000;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.35)),
+        url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #d50000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero p:not(.small-title) {
+    color: #dddddd;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #d50000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* General Sections */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #d50000;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 8px;
+}
+
+/* Services */
+
+.services {
+    background: #111111;
+}
+
+.service-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #d50000;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #aaaaaa;
+}
+
+/* Models */
+
+.models {
+    background: #080808;
+}
+
+.model-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.model-card {
+    background: #151515;
+    overflow: hidden;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.model-card:hover {
+    transform: translateY(-8px);
+}
+
+.model-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.car1 {
+    background-image:
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80");
+}
+
+.car2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80");
+}
+
+.car3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80");
+}
+
+.model-card h3,
+.model-card p,
+.model-card a {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.model-card h3 {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.model-card p {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.model-card a {
+    display: inline-block;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border-bottom: 1px solid #d50000;
+}
+
+/* About */
+
+.about {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.about-content > p:not(.small-title) {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* Contact */
+
+.contact {
+    background: #111111;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: #1c1c1c;
+    color: white;
+    border: 1px solid #333;
+    outline: none;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #d50000;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 16px;
+    border: none;
+    background: #d50000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: black;
+}
+
+/* Footer */
+
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #888;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .service-container,
+    .model-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .about h2 {
+        font-size: 35px;
+    }
+}
